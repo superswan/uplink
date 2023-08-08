@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-50;
+}
+
+@layer components {
+    .btn {
+        @apply bg-gray-300 text-white px-3 py-2 rounded-md text-sm text-white;
+    }
+
+    .card {
+        @apply max-w-sm rounded overflow-hidden shadow-lg;
+    }
+
+    h1 {
+        @apply text-lg font-bold;
+    }
+}
