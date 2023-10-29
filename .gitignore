@@ -1,4 +1,8 @@
 .vscode
 
 pb/pb_migrations
+pb/pocketbase
+pb/*.md
+pb/*.zip
+pb/pb_data
 pb/pocketbase.exe

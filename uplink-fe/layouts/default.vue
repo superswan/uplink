@@ -6,6 +6,8 @@
                 <ul class="flex gap-4">
                     <li><NuxtLink to="/">Dashboard</NuxtLink></li>
                     <li><NuxtLink to="/builder">Builder</NuxtLink></li>
+                    <li><NuxtLink to="/payloads">Payloads</NuxtLink></li>
+                    <li><NuxtLink to="/listener">Listener</NuxtLink></li>
                 </ul>
             </nav>
         </header>

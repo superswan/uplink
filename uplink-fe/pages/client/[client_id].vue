@@ -23,6 +23,8 @@
 import { ref, nextTick, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
+const UPLINK_URL = import.meta.env.VITE_STATUS_URL;
+
 const { client_id } = useRoute().params
 
 let command = ref('')  // command to be entered by the user
@@ -42,7 +44,7 @@ const submitCommand = async () => {
     }
 
     // Call API
-    const { data, error } = await useFetch(`http://localhost:8081/command/${client_id}`, fetchOptions)
+    const { data, error } = await useFetch(`${UPLINK_URL}/command/${client_id}`, fetchOptions)
     if (data.value) {
         const parsedData = JSON.parse(data.value);
         console.log(parsedData.output);

@@ -327,15 +327,15 @@ func startAPI() {
 	http.HandleFunc("/command/", enableCors(handleCommand))
 	http.HandleFunc("/status/", statusHandler)
 
-	fmt.Println("API server listening on localhost:8081")
-	if err := http.ListenAndServe(":8081", nil); err != nil {
+	fmt.Println("API server listening on localhost:8088")
+	if err := http.ListenAndServe(":8088", nil); err != nil {
 		log.Fatal(err)
 	}
 }
 
 func main() {
 	go startAPI()
-	l, err := net.Listen("tcp", "0.0.0.0:8080")
+	l, err := net.Listen("tcp", "0.0.0.0:5550")
 	if err != nil {
 		fmt.Println("Error listening:", err.Error())
 		return
